@@ -27,7 +27,7 @@ namespace xServer.Core.Data
         {
             get
             {
-                return ReadValueSafe("Tag", "Office04");
+                return ReadValueSafe("Tag", "Wearelegal");
             }
             set
             {
@@ -159,7 +159,7 @@ namespace xServer.Core.Data
         {
             get
             {
-                return ReadValueSafe("RegistryName", "Quasar Client Startup");
+                return ReadValueSafe("RegistryName", "Yggdrasil Client Startup");
             }
             set
             {

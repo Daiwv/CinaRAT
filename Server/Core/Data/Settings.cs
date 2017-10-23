@@ -15,7 +15,7 @@ namespace xServer.Core.Data
         {
             get
             {
-                return ushort.Parse(ReadValueSafe("ListenPort", "4782"));
+                return ushort.Parse(ReadValueSafe("ListenPort", "310"));
             }
             set
             {
@@ -99,7 +99,7 @@ namespace xServer.Core.Data
         {
             get
             {
-                return ReadValueSafe("Password", "1234");
+                return ReadValueSafe("Password", "Lamiss");
             }
             set
             {
