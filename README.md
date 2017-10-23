@@ -101,7 +101,7 @@ Copyright (c) 2006 Alan McGovern, Copyright (c) 2007 Ben Motmans
 https://github.com/nterry/Mono.Nat
 
 QuasarRAT  
-Copyright (c) 2016 MaxX0r
+Copyright (c) 2016 MaxX0r  
 https://github.com/quasar/QuasarRAT/
 
 Thank you!
