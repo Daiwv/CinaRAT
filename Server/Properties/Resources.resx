@@ -200,15 +200,15 @@
     <value>..\images\application_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TermsOfUse" xml:space="preserve">
-    <value>    Quasar - Remote Administration Tool
-    Copyright (C) 2016 MaxX0r
+    <value>    Yggdrasil - Remote Administration Tool
+    Copyright (C) 2017 Wearelegal
 
-    Quasar is free software: you can redistribute it and/or modify
+    Yggdrasil is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Quasar is distributed in the hope that it will be useful,
+    Yggdrasil is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
