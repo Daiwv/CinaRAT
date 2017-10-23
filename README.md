@@ -70,7 +70,7 @@ ToDo
 
 Contributing
 ---
-See [CONTRIBUTING.md](/CONTRIBUTING.md)
+See [CONTRIBUTING](/CONTRIBUTING.md)
 
 License
 ---
@@ -100,8 +100,9 @@ Mono.Nat
 Copyright (c) 2006 Alan McGovern, Copyright (c) 2007 Ben Motmans  
 https://github.com/nterry/Mono.Nat
 
-QuasarRAT
+QuasarRAT  
 Copyright (c) 2016 MaxX0r
+https://github.com/quasar/QuasarRAT/
 
 Thank you!
 ---
