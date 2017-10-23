@@ -1,6 +1,6 @@
 YggdrasilRAT
 =========
-[![Build status](https://ci.appveyor.com/api/projects/status/trrvfe5lqi7ov9lj229b?svg=true)](https://ci.appveyor.com/project/wearelegal/yggdrasilrat) [![License](http://img.shields.io/badge/license-MIT-green.svg)](https://github.com/wearelegal/YggdrasilRAT/blob/master/LICENSE)
+[![Build status](https://ci.appveyor.com/api/projects/status/fu42uhll4e204cuq?svg=true)](https://ci.appveyor.com/project/wearelegal/yggdrasilrat) [![License](http://img.shields.io/badge/license-MIT-green.svg)](https://github.com/wearelegal/YggdrasilRAT/blob/master/LICENSE)
 
 **Free, Open-Source Remote Administration Tool for Windows**
 
