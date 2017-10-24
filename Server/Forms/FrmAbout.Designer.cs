@@ -59,7 +59,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(79, 30);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Quasar";
+            this.lblTitle.Text = "Yggdrasil";
             // 
             // lblVersion
             // 

@@ -30,8 +30,9 @@ namespace xServer.Forms
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            var showToU = !chkDontShowAgain.Checked;
+            var showToU = !chkDontShowAgain.Checked; 
             Settings.ShowToU = showToU;
+            Settings.Lang = "English";
             _exit = false;
             this.Close();
         }

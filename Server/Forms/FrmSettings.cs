@@ -13,6 +13,8 @@ namespace xServer.Forms
     {
         private readonly YggdrasilServer _listenServer;
 
+        DialogResult dr;
+
         public FrmSettings(YggdrasilServer listenServer)
         {
             this._listenServer = listenServer;
@@ -32,6 +34,7 @@ namespace xServer.Forms
 
         private void FrmSettings_Load(object sender, EventArgs e)
         {
+            cmbLang.Text = Settings.Lang;
             ncPort.Value = Settings.ListenPort;
             chkIPv6Support.Checked = Settings.IPv6Support;
             chkAutoListen.Checked = Settings.AutoListen;
@@ -128,6 +131,23 @@ namespace xServer.Forms
         {
             ushort port = GetPortSafe();
             string password = txtPassword.Text;
+            string lang = cmbLang.Text;
+
+            if(lang != Settings.Lang && dr == DialogResult.Yes)
+            {
+                switch (lang)
+                {
+                    case "English":
+                        Settings.Lang = "English";
+                        break;
+                    case "Español":
+                        Settings.Lang = "Español";
+                        break;
+                    default:
+                        Settings.Lang = "English";
+                        break;
+                }
+            }
 
             if (port == 0)
             {
@@ -190,6 +210,16 @@ namespace xServer.Forms
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             ShowPassword(chkShowPassword.Checked);
+        }
+
+        private void cmbLang_Click(object sender, EventArgs e)
+        {
+            if(dr == DialogResult.None 
+                || dr == DialogResult.Cancel 
+                || dr == DialogResult.No)
+            {
+                dr = MessageBox.Show("This require the app restart. Do you want to change the language?", "Confirm", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -286,7 +286,7 @@ namespace xServer.Forms
 
             if (!File.Exists("client.bin"))
             {
-                MessageBox.Show("Could not locate \"client.bin\" file. It should be in the same directory as Quasar.",
+                MessageBox.Show("Could not locate \"client.bin\" file. It should be in the same directory as Yggdrasil.",
                     "Build failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return options;
             }

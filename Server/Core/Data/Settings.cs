@@ -35,6 +35,18 @@ namespace xServer.Core.Data
             }
         }
 
+        public static string Lang
+        {
+            get
+            {
+                return ReadValueSafe("Language", "English");
+            }
+            set
+            {
+                WriteValue("Language", value.ToString());
+            }
+        }
+
         public static bool ShowToU
         {
             get

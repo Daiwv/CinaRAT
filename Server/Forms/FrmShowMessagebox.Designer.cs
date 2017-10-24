@@ -103,7 +103,7 @@
             this.txtText.Name = "txtText";
             this.txtText.Size = new System.Drawing.Size(249, 22);
             this.txtText.TabIndex = 4;
-            this.txtText.Text = "You are running Quasar.";
+            this.txtText.Text = "You are running Yggdrasil.";
             // 
             // txtCaption
             // 
