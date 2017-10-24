@@ -48,6 +48,23 @@ What need I to know?
 --
   * Yggdrasil use the QuasarRAT as base, all the credits are saved.
 
+Screenshots
+--
+>! [demo1](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo1.png)
+>! [demo2](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo2.png)
+>! [demo3](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo3.png)
+>! [demo4](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo4.png)
+>! [demo5](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo5.png)
+>! [demo6](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo6.png)
+>! [demo7](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo7.png)
+>! [demo8](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo8.png)
+>! [demo9](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo9.png)
+>! [demo10](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo10.png)
+>! [demo11](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo11.png)
+>! [demo12](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo12.png)
+>! [demo13](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo13.png)
+>! [demo14](https://raw.githubusercontent.com/wearelegal/YggdrasilRAT/master/docs/img/demo/demo14.png)
+
 Compiling
 ---
 Open the project in Visual Studio and click build, or use one of the batch files included in the root directory.
