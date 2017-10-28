@@ -123,6 +123,16 @@ namespace xServer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CinaRAT_Server {
+            get {
+                object obj = ResourceManager.GetObject("CinaRAT_Server", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap computer {
             get {
                 object obj = ResourceManager.GetObject("computer", resourceCulture);
@@ -146,6 +156,16 @@ namespace xServer.Properties {
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap destructive {
+            get {
+                object obj = ResourceManager.GetObject("destructive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -441,17 +461,17 @@ namespace xServer.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a     Yggdrasil - Remote Administration Tool
+        ///   Busca una cadena traducida similar a     CinaRAT - Remote Administration Tool
         ///    Copyright (C) 2017 Wearelegal
         ///
-        ///    Yggdrasil is free software: you can redistribute it and/or modify
+        ///    CinaRAT is free software: you can redistribute it and/or modify
         ///    it under the terms of the GNU General Public License as published by
         ///    the Free Software Foundation, either version 3 of the License, or
         ///    (at your option) any later version.
         ///
-        ///    Yggdrasil is distributed in the hope that it will be useful,
+        ///    CinaRAT is distributed in the hope that it will be useful,
         ///    but WITHOUT ANY WARRANTY; without even the implied warranty of
-        ///    MERCHANTABILITY or FITNESS FOR A PARTICULAR  [resto de la cadena truncado]&quot;;.
+        ///    MERCHANTABILITY or FITNESS FOR A PARTICU [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string TermsOfUse {
             get {
@@ -515,16 +535,6 @@ namespace xServer.Properties {
         internal static System.Drawing.Bitmap world_link {
             get {
                 object obj = ResourceManager.GetObject("world_link", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Yggdrasil_Server {
-            get {
-                object obj = ResourceManager.GetObject("Yggdrasil_Server", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

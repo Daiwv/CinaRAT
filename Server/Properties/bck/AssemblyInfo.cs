@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
 [assembly: AssemblyTitle("CinaRAT")]
-[assembly: AssemblyDescription("Remote Administration Tool")]
+[assembly: AssemblyDescription("Cina is not a Remote Administration Tool")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Wearelegal")]
 [assembly: AssemblyProduct("CinaRAT")]
-[assembly: AssemblyCopyright("Copyright © Wearelegal 2017 Copyright © MaxX0r 2016")]
+[assembly: AssemblyCopyright("Copyright © Wearelegal 2017 - Copyright © MaxX0r 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: InternalsVisibleTo("Server.Tests")]

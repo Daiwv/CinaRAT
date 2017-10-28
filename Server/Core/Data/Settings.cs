@@ -9,7 +9,7 @@ namespace xServer.Core.Data
     {
         private static readonly string SettingsPath = Path.Combine(Application.StartupPath, "settings.xml");
 
-        public static string RepositoryURL = @"https://github.com/wearelegal/YggdrasilRAT";
+        public static string RepositoryURL = @"https://github.com/wearelegal/CinaRAT";
 
         public static ushort ListenPort
         {
@@ -68,6 +68,18 @@ namespace xServer.Core.Data
             set
             {
                 WriteValue("AutoListen", value.ToString());
+            }
+        }
+
+        public static bool StartMinified
+        {
+            get
+            {
+                return bool.Parse(ReadValueSafe("StartMinified", "False"));
+            }
+            set
+            {
+                WriteValue("StartMinified", value.ToString());
             }
         }
 

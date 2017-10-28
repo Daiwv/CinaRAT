@@ -11,7 +11,7 @@ using xClient.Core.Utilities;
 
 namespace xClient.Core.Networking
 {
-    public class YggdrasilClient : Client
+    public class CinaRATClient : Client
     {
         /// <summary>
         /// When Exiting is true, stop all running threads and exit.
@@ -20,7 +20,7 @@ namespace xClient.Core.Networking
         public bool Authenticated { get; private set; }
         private readonly HostsManager _hosts;
 
-        public YggdrasilClient(HostsManager hostsManager) : base()
+        public CinaRATClient(HostsManager hostsManager) : base()
         {
             this._hosts = hostsManager;
 

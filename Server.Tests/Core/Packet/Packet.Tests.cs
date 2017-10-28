@@ -12,7 +12,7 @@ namespace xServer.Tests.Core.Packet
         [TestMethod]
         public void AreAllPacketsRegistered()
         {
-            var asm = Assembly.Load("Yggdrasil");
+            var asm = Assembly.Load("CinaRAT");
             var expectedPacketTypes = asm.GetTypes().Where(t => t.GetInterfaces().Contains(typeof(IPacket)) && t.GetCustomAttributes(typeof(SerializableAttribute), false).Any()).ToArray();
             var registeredPackets = PacketRegistery.GetPacketTypes();
             CollectionAssert.AreEquivalent(expectedPacketTypes, registeredPackets);

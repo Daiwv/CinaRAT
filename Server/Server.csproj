@@ -9,10 +9,11 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>xServer</RootNamespace>
-    <AssemblyName>Yggdrasil</AssemblyName>
+    <AssemblyName>CinaRAT</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -34,7 +34,7 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <ApplicationIcon>Yggdrasil_Server.ico</ApplicationIcon>
+    <ApplicationIcon>CinaRAT_Server.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -115,6 +115,8 @@
     <Compile Include="Core\Data\AutostartItem.cs" />
     <Compile Include="Core\Data\BuildOptions.cs" />
     <Compile Include="Core\Data\DownloadAndExecute.cs" />
+    <Compile Include="Core\Data\Language.cs" />
+    <Compile Include="Core\Data\Languages.cs" />
     <Compile Include="Core\Data\Messagebox.cs" />
     <Compile Include="Core\Data\Update.cs" />
     <Compile Include="Core\Data\UploadAndExecute.cs" />
@@ -234,7 +236,7 @@
     <Compile Include="Core\Utilities\ListViewColumnSorter.cs" />
     <Compile Include="Core\Extensions\ListViewExtensions.cs" />
     <Compile Include="Core\Utilities\NoIpUpdater.cs" />
-    <Compile Include="Core\Networking\YggdrasilServer.cs" />
+    <Compile Include="Core\Networking\CinaRATServer.cs" />
     <Compile Include="Core\Networking\Utilities\PooledBufferManager.cs" />
     <Compile Include="Core\Packets\ClientPackets\GetDesktopResponse.cs" />
     <Compile Include="Core\Packets\ClientPackets\GetDirectoryResponse.cs" />
@@ -500,6 +502,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRegistryEditor.resx">
       <DependentUpon>FrmRegistryEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRegValueEditBinary.resx">
       <DependentUpon>FrmRegValueEditBinary.cs</DependentUpon>
@@ -573,8 +576,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CinaRAT_Server.ico" />
     <Content Include="Core\MouseKeyHook\HotKeys\ReadMe.txt" />
-    <Content Include="Yggdrasil_Server.ico" />
+    <None Include="images\destructive.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -582,6 +586,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

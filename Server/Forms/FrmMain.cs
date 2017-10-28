@@ -18,7 +18,7 @@ namespace xServer.Forms
 {
     public partial class FrmMain : Form
     {
-        public YggdrasilServer ListenServer { get; set; }
+        public CinaRATServer ListenServer { get; set; }
         public static FrmMain Instance { get; private set; }
 
         private const int STATUS_ID = 4;
@@ -63,9 +63,9 @@ namespace xServer.Forms
                 {
                     int selected = lstClients.SelectedItems.Count;
                     this.Text = (selected > 0)
-                        ? string.Format("Yggdrasil - Connected: {0} [Selected: {1}]", ListenServer.ConnectedClients.Length,
+                        ? string.Format("CinaRAT - Connected: {0} [Selected: {1}]", ListenServer.ConnectedClients.Length,
                             selected)
-                        : string.Format("Yggdrasil - Connected: {0}", ListenServer.ConnectedClients.Length);
+                        : string.Format("CinaRAT - Connected: {0}", ListenServer.ConnectedClients.Length);
                 });
             }
             catch (Exception)
@@ -76,7 +76,7 @@ namespace xServer.Forms
 
         private void InitializeServer()
         {
-            ListenServer = new YggdrasilServer();
+            ListenServer = new CinaRATServer();
 
             ListenServer.ServerState += ServerState;
             ListenServer.ClientConnected += ClientConnected;
@@ -106,19 +106,58 @@ namespace xServer.Forms
             }
         }
 
+        private void StartMinified()
+        {
+            if (Settings.StartMinified)
+            {
+                this.WindowState = FormWindowState.Minimized;
+                hideToolStripMenuItemNotifyIcon.Text = "Show";
+                this.ShowInTaskbar = false;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                hideToolStripMenuItemNotifyIcon.Text = "Hide";
+                this.ShowInTaskbar = true;
+            }
+        }
+
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            StartMinified();
             InitializeServer();
             AutostartListening();
+            
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ListenServer.Disconnect();
-            UPnP.DeletePortMap(Settings.ListenPort);
-            notifyIcon.Visible = false;
-            notifyIcon.Dispose();
-            Instance = null;
+            DialogResult dr = MessageBox.Show("Do you want to minimize the program instead of closing it?", "Exit or minified",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Exclamation);
+            if (dr == DialogResult.Yes)
+            {
+                this.WindowState = FormWindowState.Minimized;
+                hideToolStripMenuItemNotifyIcon.Text = "Show";
+                this.ShowInTaskbar = false;
+                notifyIcon.BalloonTipIcon = ToolTipIcon.Info;
+                notifyIcon.BalloonTipTitle = "CinaRAT is now minified";
+                notifyIcon.BalloonTipText = "CinaRAT still running in background." +
+                                            Environment.NewLine +
+                                            "If you want to close the program, right click the icon and choose close.";
+                notifyIcon.ShowBalloonTip(5000);
+                e.Cancel = true;
+            }
+            else if(dr == DialogResult.No)
+            {
+                ListenServer.Disconnect();
+                UPnP.DeletePortMap(Settings.ListenPort);
+                notifyIcon.Visible = false;
+                notifyIcon.Dispose();
+                Instance = null;
+            }
+            else if (dr == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void lstClients_SelectedIndexChanged(object sender, EventArgs e)
@@ -898,9 +937,28 @@ namespace xServer.Forms
             this.WindowState = (this.WindowState == FormWindowState.Normal)
                 ? FormWindowState.Minimized
                 : FormWindowState.Normal;
+            hideToolStripMenuItemNotifyIcon.Text = (this.WindowState == FormWindowState.Normal)
+                ? "Hide"
+                : "Show";
             this.ShowInTaskbar = (this.WindowState == FormWindowState.Normal);
         }
 
         #endregion
+
+        private void closeToolStripMenuItemNotifyIcon_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void hideToolStripMenuItemNotifyIcon_Click(object sender, EventArgs e)
+        {
+            this.WindowState = (this.WindowState == FormWindowState.Normal)
+                ? FormWindowState.Minimized
+                : FormWindowState.Normal;
+            hideToolStripMenuItemNotifyIcon.Text = (this.WindowState == FormWindowState.Normal)
+                ? "Hide"
+                : "Show";
+            this.ShowInTaskbar = (this.WindowState == FormWindowState.Normal);
+        }
     }
 }

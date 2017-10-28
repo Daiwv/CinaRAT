@@ -64,13 +64,23 @@ namespace xServer.Forms
             this.webFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visitWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showMessageboxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lineToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imgFlags = new System.Windows.Forms.ImageList(this.components);
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStripNotifyIcon = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.hideToolStripMenuItemNotifyIcon = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.closeToolStripMenuItemNotifyIcon = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.listenToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.fIleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.builderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lstClients = new xServer.Controls.AeroListView();
             this.hIP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.hTag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -81,13 +91,8 @@ namespace xServer.Forms
             this.hCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.hOS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.hAccountType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.fIleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.builderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip.SuspendLayout();
+            this.contextMenuStripNotifyIcon.SuspendLayout();
             this.tableLayoutPanel.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -100,7 +105,7 @@ namespace xServer.Forms
             this.systemToolStripMenuItem,
             this.surveillanceToolStripMenuItem,
             this.miscellaneousToolStripMenuItem,
-            this.lineToolStripMenuItem,
+            this.toolStripSeparator1,
             this.selectAllToolStripMenuItem});
             this.contextMenuStrip.Name = "ctxtMenu";
             this.contextMenuStrip.Size = new System.Drawing.Size(150, 120);
@@ -377,10 +382,10 @@ namespace xServer.Forms
             this.showMessageboxToolStripMenuItem.Text = "Show Messagebox";
             this.showMessageboxToolStripMenuItem.Click += new System.EventHandler(this.showMessageboxToolStripMenuItem_Click);
             // 
-            // lineToolStripMenuItem
+            // toolStripSeparator1
             // 
-            this.lineToolStripMenuItem.Name = "lineToolStripMenuItem";
-            this.lineToolStripMenuItem.Size = new System.Drawing.Size(146, 6);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(146, 6);
             // 
             // selectAllToolStripMenuItem
             // 
@@ -644,10 +649,39 @@ namespace xServer.Forms
             // 
             // notifyIcon
             // 
+            this.notifyIcon.ContextMenuStrip = this.contextMenuStripNotifyIcon;
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "Yggdrasil";
+            this.notifyIcon.Text = "CinaRAT";
             this.notifyIcon.Visible = true;
             this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
+            // 
+            // contextMenuStripNotifyIcon
+            // 
+            this.contextMenuStripNotifyIcon.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hideToolStripMenuItemNotifyIcon,
+            this.toolStripSeparator2,
+            this.closeToolStripMenuItemNotifyIcon});
+            this.contextMenuStripNotifyIcon.Name = "contextMenuStripNotifyIcon";
+            this.contextMenuStripNotifyIcon.Size = new System.Drawing.Size(104, 54);
+            // 
+            // hideToolStripMenuItemNotifyIcon
+            // 
+            this.hideToolStripMenuItemNotifyIcon.Name = "hideToolStripMenuItemNotifyIcon";
+            this.hideToolStripMenuItemNotifyIcon.Size = new System.Drawing.Size(103, 22);
+            this.hideToolStripMenuItemNotifyIcon.Text = "Hide";
+            this.hideToolStripMenuItemNotifyIcon.Click += new System.EventHandler(this.hideToolStripMenuItemNotifyIcon_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(100, 6);
+            // 
+            // closeToolStripMenuItemNotifyIcon
+            // 
+            this.closeToolStripMenuItemNotifyIcon.Name = "closeToolStripMenuItemNotifyIcon";
+            this.closeToolStripMenuItemNotifyIcon.Size = new System.Drawing.Size(103, 22);
+            this.closeToolStripMenuItemNotifyIcon.Text = "Close";
+            this.closeToolStripMenuItemNotifyIcon.Click += new System.EventHandler(this.closeToolStripMenuItemNotifyIcon_Click);
             // 
             // tableLayoutPanel
             // 
@@ -684,6 +718,58 @@ namespace xServer.Forms
             this.listenToolStripStatusLabel.Name = "listenToolStripStatusLabel";
             this.listenToolStripStatusLabel.Size = new System.Drawing.Size(87, 17);
             this.listenToolStripStatusLabel.Text = "Listening: False";
+            // 
+            // menuStrip
+            // 
+            this.menuStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fIleToolStripMenuItem,
+            this.settingsToolStripMenuItem,
+            this.builderToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(216, 25);
+            this.menuStrip.TabIndex = 2;
+            // 
+            // fIleToolStripMenuItem
+            // 
+            this.fIleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.closeToolStripMenuItem});
+            this.fIleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fIleToolStripMenuItem.Name = "fIleToolStripMenuItem";
+            this.fIleToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
+            this.fIleToolStripMenuItem.Text = "File";
+            // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // builderToolStripMenuItem
+            // 
+            this.builderToolStripMenuItem.Name = "builderToolStripMenuItem";
+            this.builderToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
+            this.builderToolStripMenuItem.Text = "Builder";
+            this.builderToolStripMenuItem.Click += new System.EventHandler(this.builderToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // lstClients
             // 
@@ -755,58 +841,6 @@ namespace xServer.Forms
             this.hAccountType.Text = "Account Type";
             this.hAccountType.Width = 100;
             // 
-            // menuStrip
-            // 
-            this.menuStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fIleToolStripMenuItem,
-            this.settingsToolStripMenuItem,
-            this.builderToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(216, 25);
-            this.menuStrip.TabIndex = 2;
-            // 
-            // fIleToolStripMenuItem
-            // 
-            this.fIleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.closeToolStripMenuItem});
-            this.fIleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fIleToolStripMenuItem.Name = "fIleToolStripMenuItem";
-            this.fIleToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
-            this.fIleToolStripMenuItem.Text = "File";
-            // 
-            // closeToolStripMenuItem
-            // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.closeToolStripMenuItem.Text = "Close";
-            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
-            // 
-            // builderToolStripMenuItem
-            // 
-            this.builderToolStripMenuItem.Name = "builderToolStripMenuItem";
-            this.builderToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
-            this.builderToolStripMenuItem.Text = "Builder";
-            this.builderToolStripMenuItem.Click += new System.EventHandler(this.builderToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -819,10 +853,11 @@ namespace xServer.Forms
             this.MinimumSize = new System.Drawing.Size(680, 415);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Yggdrasil - Connected: 0";
+            this.Text = "CinaRAT - Connected: 0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.contextMenuStrip.ResumeLayout(false);
+            this.contextMenuStripNotifyIcon.ResumeLayout(false);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -834,27 +869,18 @@ namespace xServer.Forms
         }
 
         #endregion
-
-        private System.Windows.Forms.ColumnHeader hIP;
-        private System.Windows.Forms.ColumnHeader hVersion;
-        private System.Windows.Forms.ColumnHeader hCountry;
-        private System.Windows.Forms.ColumnHeader hOS;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem connectionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reconnectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem disconnectToolStripMenuItem;
-        private System.Windows.Forms.ColumnHeader hTag;
         private System.Windows.Forms.ImageList imgFlags;
         private System.Windows.Forms.ToolStripMenuItem systemToolStripMenuItem;
-        private System.Windows.Forms.ColumnHeader hStatus;
         private System.Windows.Forms.ToolStripMenuItem uninstallToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem surveillanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem remoteDesktopToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem taskManagerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileManagerToolStripMenuItem;
-        private System.Windows.Forms.ColumnHeader hAccountType;
         private System.Windows.Forms.ToolStripMenuItem systemInformationToolStripMenuItem;
-        private System.Windows.Forms.ColumnHeader hUserStatus;
         private System.Windows.Forms.ToolStripMenuItem miscellaneousToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visitWebsiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem passwordRecoveryToolStripMenuItem;
@@ -873,10 +899,7 @@ namespace xServer.Forms
         private System.Windows.Forms.ToolStripMenuItem keyloggerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reverseProxyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registryEditorToolStripMenuItem;
-        private AeroListView lstClients;
         private System.Windows.Forms.NotifyIcon notifyIcon;
-        private System.Windows.Forms.ColumnHeader hUserPC;
-        private System.Windows.Forms.ToolStripSeparator lineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.MenuStrip menuStrip;
@@ -890,6 +913,21 @@ namespace xServer.Forms
         private System.Windows.Forms.ToolStripMenuItem elevateClientPermissionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connectionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem remoteWebcamToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private AeroListView lstClients;
+        private System.Windows.Forms.ColumnHeader hIP;
+        private System.Windows.Forms.ColumnHeader hTag;
+        private System.Windows.Forms.ColumnHeader hUserPC;
+        private System.Windows.Forms.ColumnHeader hVersion;
+        private System.Windows.Forms.ColumnHeader hStatus;
+        private System.Windows.Forms.ColumnHeader hUserStatus;
+        private System.Windows.Forms.ColumnHeader hCountry;
+        private System.Windows.Forms.ColumnHeader hOS;
+        private System.Windows.Forms.ColumnHeader hAccountType;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripNotifyIcon;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItemNotifyIcon;
+        private System.Windows.Forms.ToolStripMenuItem hideToolStripMenuItemNotifyIcon;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 

