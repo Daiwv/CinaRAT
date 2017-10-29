@@ -1,6 +1,6 @@
 CinaRAT
 =========
-[![Build status](https://ci.appveyor.com/api/projects/status/fu42uhll4e204cuq?svg=true)](https://ci.appveyor.com/project/wearelegal/cinarat) [![License](http://img.shields.io/badge/license-MIT-green.svg)](https://github.com/wearelegal/CinaRAT/blob/master/LICENSE)
+[![Build status](https://ci.appveyor.com/api/projects/status/6l7sua2lrorxs9d3?svg=true)](https://ci.appveyor.com/project/wearelegal/cinarat) [![License](http://img.shields.io/badge/license-MIT-green.svg)](https://github.com/wearelegal/CinaRAT/blob/master/LICENSE)
 
 **Free, Open-Source Remote Administration Tool for Windows**
 
