@@ -6,6 +6,9 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.exe
+fciv.err
+checkshum.bat
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -65,8 +68,6 @@ artifacts/
 *.pidb
 *.svclog
 *.scc
-*.exe
-fciv.err
 
 # Chutzpah Test files
 _Chutzpah*
