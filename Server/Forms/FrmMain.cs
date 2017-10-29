@@ -43,6 +43,9 @@ namespace xServer.Forms
         {
             Instance = this;
 
+            if(Settings.VersionController)
+                VersionController.init();
+
             AES.SetDefaultKey(Settings.Password);
 
 #if !DEBUG
@@ -127,7 +130,6 @@ namespace xServer.Forms
             StartMinified();
             InitializeServer();
             AutostartListening();
-            
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)

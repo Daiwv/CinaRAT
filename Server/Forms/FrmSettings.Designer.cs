@@ -52,12 +52,14 @@
             this.lblLang = new System.Windows.Forms.Label();
             this.cmbLang = new System.Windows.Forms.ComboBox();
             this.chkStartMinified = new System.Windows.Forms.CheckBox();
+            this.chkVersionController = new System.Windows.Forms.CheckBox();
+            this.btnCheckVersion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ncPort)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(227, 343);
+            this.btnSave.Location = new System.Drawing.Point(227, 396);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 19;
@@ -109,7 +111,7 @@
             // chkPopup
             // 
             this.chkPopup.AutoSize = true;
-            this.chkPopup.Location = new System.Drawing.Point(12, 156);
+            this.chkPopup.Location = new System.Drawing.Point(12, 209);
             this.chkPopup.Name = "chkPopup";
             this.chkPopup.Size = new System.Drawing.Size(259, 17);
             this.chkPopup.TabIndex = 7;
@@ -120,7 +122,7 @@
             // 
             this.btnListen.Location = new System.Drawing.Point(190, 31);
             this.btnListen.Name = "btnListen";
-            this.btnListen.Size = new System.Drawing.Size(110, 23);
+            this.btnListen.Size = new System.Drawing.Size(112, 23);
             this.btnListen.TabIndex = 2;
             this.btnListen.Text = "Start listening";
             this.btnListen.UseVisualStyleBackColor = true;
@@ -128,7 +130,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(143, 343);
+            this.btnCancel.Location = new System.Drawing.Point(143, 396);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 18;
@@ -149,13 +151,13 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(109, 60);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(191, 22);
+            this.txtPassword.Size = new System.Drawing.Size(193, 22);
             this.txtPassword.TabIndex = 4;
             // 
             // chkUseUpnp
             // 
             this.chkUseUpnp.AutoSize = true;
-            this.chkUseUpnp.Location = new System.Drawing.Point(12, 179);
+            this.chkUseUpnp.Location = new System.Drawing.Point(12, 232);
             this.chkUseUpnp.Name = "chkUseUpnp";
             this.chkUseUpnp.Size = new System.Drawing.Size(229, 17);
             this.chkUseUpnp.TabIndex = 8;
@@ -165,7 +167,7 @@
             // chkShowTooltip
             // 
             this.chkShowTooltip.AutoSize = true;
-            this.chkShowTooltip.Location = new System.Drawing.Point(12, 202);
+            this.chkShowTooltip.Location = new System.Drawing.Point(12, 255);
             this.chkShowTooltip.Name = "chkShowTooltip";
             this.chkShowTooltip.Size = new System.Drawing.Size(268, 17);
             this.chkShowTooltip.TabIndex = 9;
@@ -175,7 +177,7 @@
             // chkNoIPIntegration
             // 
             this.chkNoIPIntegration.AutoSize = true;
-            this.chkNoIPIntegration.Location = new System.Drawing.Point(12, 225);
+            this.chkNoIPIntegration.Location = new System.Drawing.Point(12, 278);
             this.chkNoIPIntegration.Name = "chkNoIPIntegration";
             this.chkNoIPIntegration.Size = new System.Drawing.Size(192, 17);
             this.chkNoIPIntegration.TabIndex = 10;
@@ -187,7 +189,7 @@
             // 
             this.lblHost.AutoSize = true;
             this.lblHost.Enabled = false;
-            this.lblHost.Location = new System.Drawing.Point(30, 251);
+            this.lblHost.Location = new System.Drawing.Point(30, 304);
             this.lblHost.Name = "lblHost";
             this.lblHost.Size = new System.Drawing.Size(34, 13);
             this.lblHost.TabIndex = 11;
@@ -197,7 +199,7 @@
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Enabled = false;
-            this.lblPass.Location = new System.Drawing.Point(167, 279);
+            this.lblPass.Location = new System.Drawing.Point(167, 332);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(32, 13);
             this.lblPass.TabIndex = 15;
@@ -207,7 +209,7 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Enabled = false;
-            this.lblUser.Location = new System.Drawing.Point(30, 279);
+            this.lblUser.Location = new System.Drawing.Point(30, 356);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(32, 13);
             this.lblUser.TabIndex = 13;
@@ -216,7 +218,7 @@
             // txtNoIPPass
             // 
             this.txtNoIPPass.Enabled = false;
-            this.txtNoIPPass.Location = new System.Drawing.Point(202, 276);
+            this.txtNoIPPass.Location = new System.Drawing.Point(202, 329);
             this.txtNoIPPass.Name = "txtNoIPPass";
             this.txtNoIPPass.Size = new System.Drawing.Size(100, 22);
             this.txtNoIPPass.TabIndex = 16;
@@ -224,7 +226,7 @@
             // txtNoIPUser
             // 
             this.txtNoIPUser.Enabled = false;
-            this.txtNoIPUser.Location = new System.Drawing.Point(70, 276);
+            this.txtNoIPUser.Location = new System.Drawing.Point(70, 329);
             this.txtNoIPUser.Name = "txtNoIPUser";
             this.txtNoIPUser.Size = new System.Drawing.Size(91, 22);
             this.txtNoIPUser.TabIndex = 14;
@@ -232,16 +234,16 @@
             // txtNoIPHost
             // 
             this.txtNoIPHost.Enabled = false;
-            this.txtNoIPHost.Location = new System.Drawing.Point(70, 248);
+            this.txtNoIPHost.Location = new System.Drawing.Point(70, 301);
             this.txtNoIPHost.Name = "txtNoIPHost";
-            this.txtNoIPHost.Size = new System.Drawing.Size(229, 22);
+            this.txtNoIPHost.Size = new System.Drawing.Size(232, 22);
             this.txtNoIPHost.TabIndex = 12;
             // 
             // chkShowPassword
             // 
             this.chkShowPassword.AutoSize = true;
             this.chkShowPassword.Enabled = false;
-            this.chkShowPassword.Location = new System.Drawing.Point(192, 304);
+            this.chkShowPassword.Location = new System.Drawing.Point(192, 357);
             this.chkShowPassword.Name = "chkShowPassword";
             this.chkShowPassword.Size = new System.Drawing.Size(107, 17);
             this.chkShowPassword.TabIndex = 17;
@@ -278,25 +280,47 @@
             "Español"});
             this.cmbLang.Location = new System.Drawing.Point(109, 5);
             this.cmbLang.Name = "cmbLang";
-            this.cmbLang.Size = new System.Drawing.Size(191, 21);
+            this.cmbLang.Size = new System.Drawing.Size(193, 21);
             this.cmbLang.TabIndex = 21;
             this.cmbLang.Click += new System.EventHandler(this.cmbLang_Click);
             // 
             // chkStartMinified
             // 
             this.chkStartMinified.AutoSize = true;
-            this.chkStartMinified.Location = new System.Drawing.Point(12, 133);
+            this.chkStartMinified.Location = new System.Drawing.Point(12, 134);
             this.chkStartMinified.Name = "chkStartMinified";
             this.chkStartMinified.Size = new System.Drawing.Size(95, 17);
             this.chkStartMinified.TabIndex = 22;
             this.chkStartMinified.Text = "Start minified";
             this.chkStartMinified.UseVisualStyleBackColor = true;
             // 
+            // chkVersionController
+            // 
+            this.chkVersionController.AutoSize = true;
+            this.chkVersionController.Location = new System.Drawing.Point(12, 157);
+            this.chkVersionController.Name = "chkVersionController";
+            this.chkVersionController.Size = new System.Drawing.Size(257, 17);
+            this.chkVersionController.TabIndex = 23;
+            this.chkVersionController.Text = "Check if a new version is available on startup";
+            this.chkVersionController.UseVisualStyleBackColor = true;
+            // 
+            // btnCheckVersion
+            // 
+            this.btnCheckVersion.Location = new System.Drawing.Point(12, 180);
+            this.btnCheckVersion.Name = "btnCheckVersion";
+            this.btnCheckVersion.Size = new System.Drawing.Size(290, 23);
+            this.btnCheckVersion.TabIndex = 24;
+            this.btnCheckVersion.Text = "Check new versions";
+            this.btnCheckVersion.UseVisualStyleBackColor = true;
+            this.btnCheckVersion.Click += new System.EventHandler(this.btnCheckVersion_Click);
+            // 
             // FrmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(314, 378);
+            this.ClientSize = new System.Drawing.Size(314, 429);
+            this.Controls.Add(this.btnCheckVersion);
+            this.Controls.Add(this.chkVersionController);
             this.Controls.Add(this.chkStartMinified);
             this.Controls.Add(this.cmbLang);
             this.Controls.Add(this.lblLang);
@@ -360,5 +384,7 @@
         private System.Windows.Forms.Label lblLang;
         private System.Windows.Forms.ComboBox cmbLang;
         private System.Windows.Forms.CheckBox chkStartMinified;
+        private System.Windows.Forms.CheckBox chkVersionController;
+        private System.Windows.Forms.Button btnCheckVersion;
     }
 }

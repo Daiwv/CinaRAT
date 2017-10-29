@@ -39,6 +39,7 @@ namespace xServer.Forms
             chkIPv6Support.Checked = Settings.IPv6Support;
             chkAutoListen.Checked = Settings.AutoListen;
             chkStartMinified.Checked = Settings.StartMinified;
+            chkVersionController.Checked = Settings.VersionController;
             chkPopup.Checked = Settings.ShowPopup;
             txtPassword.Text = Settings.Password;
             chkUseUpnp.Checked = Settings.UseUPnP;
@@ -168,6 +169,7 @@ namespace xServer.Forms
             Settings.IPv6Support = chkIPv6Support.Checked;
             Settings.AutoListen = chkAutoListen.Checked;
             Settings.StartMinified = chkStartMinified.Checked;
+            Settings.VersionController = chkVersionController.Checked;
             Settings.ShowPopup = chkPopup.Checked;
             if (password != Settings.Password)
                 AES.SetDefaultKey(password);
@@ -222,6 +224,11 @@ namespace xServer.Forms
             {
                 dr = MessageBox.Show("This require the app restart. Do you want to change the language?", "Confirm", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnCheckVersion_Click(object sender, EventArgs e)
+        {
+            VersionController.init(true);
         }
     }
 }

@@ -1,0 +1,18 @@
+********************************************************************************
+Command Line: fciv.exe -r Bin\Release 
+
+********************************************************************************
+Command Line: fciv.exe -r Bin\Release -bot -exc Bin\Release\client.bin -exc Bin\Release\Client.exe -exc Bin\Release\settings.xml 
+
+********************************************************************************
+Command Line: fciv.exe -r Bin\Release -bot -exc Bin\Release\client.bin Bin\Release\Client.exe Bin\Release\settings.xml 
+
+********************************************************************************
+Command Line: fciv.exe -r Bin\Release -both -exc Bin\Release\client.bin Bin\Release\Client.exe Bin\Release\settings.xml 
+
+********************************************************************************
+Command Line: fciv.exe -r Bin\Release -both 
+
+********************************************************************************
+Command Line: fciv.exe -r Bin\Release -both 
+

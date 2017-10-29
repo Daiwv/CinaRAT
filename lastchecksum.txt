@@ -1,0 +1,19 @@
+//
+// File Checksum Integrity Verifier version 2.05.
+//
+Start Time: 10/29/2017 at 15h22'35''
+
+		MD5				SHA-1
+-------------------------------------------------------------------------
+d29abd482188b231332271e56588824a e9be9278cbaadacade023983f4cef5e6de63a573 bin\release\CinaRAT.exe
+057b623895c3348f13de882f38a15531 f339a780ccc9c34a10ebb6a74c7e03371ff7f400 bin\release\client.bin
+8df4d6b5dc1629fcefcdc20210a88eac 16c661757ad90eb84228aa3487db11a2eac6fe64 bin\release\Mono.Cecil.dll
+bf929442b12d4b5f9906b29834bf7db1 810a2b3c8e548d1df931538bc304cc1405f7a32b bin\release\Mono.Nat.dll
+64e9cb25aeefeeba3bb579fb1a5559bc e719f80fcbd952609475f3d4a42aa578b2034624 bin\release\Vestris.ResourceLib.dll
+
+End Time..: 10/29/2017 at 15h22'35''
+
+
+	Processed 1 directories
+	Processed 5 files
+Errors have been reported to fciv.err

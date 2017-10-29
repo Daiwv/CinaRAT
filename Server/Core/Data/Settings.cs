@@ -83,6 +83,18 @@ namespace xServer.Core.Data
             }
         }
 
+        public static bool VersionController
+        {
+            get
+            {
+                return bool.Parse(ReadValueSafe("VersionController", "True"));
+            }
+            set
+            {
+                WriteValue("VersionController", value.ToString());
+            }
+        }
+
         public static bool ShowPopup
         {
             get
